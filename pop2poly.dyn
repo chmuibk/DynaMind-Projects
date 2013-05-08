@@ -1,0 +1,250 @@
+<DynaMind>
+	<Info Version="0.3/">
+<DynaMindCore>
+	<Nodes>
+		<RootNode>
+			<UUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+		</RootNode>
+		<Node>
+			<ClassName value="ImportwithGDAL"/>
+			<UUID value="{08807298-792e-4fb8-b46f-65d000dbbc3b}"/>
+			<Name value=""/>
+			<GroupUUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+			<DebugMode value="0"/>
+			<parameter name="AppendToExisting">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="AttributesToImport">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="Filename">
+				<![CDATA[/home/gaelic/Work/Data/GIS Data/tyrol-population.shp]]>
+			</parameter>
+			<parameter name="ImportAll">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="Tolerance">
+				<![CDATA[0.01]]>
+			</parameter>
+			<parameter name="Transform to EPSG:">
+				<![CDATA[31254]]>
+			</parameter>
+			<parameter name="ViewName">
+				<![CDATA[pop]]>
+			</parameter>
+			<parameter name="WFSDataName">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSPassword">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSServer">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSUsername">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="flip_wfs">
+				<![CDATA[0]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="SpatialLinking"/>
+			<UUID value="{1061a157-f80e-4d82-ae48-0218807ae137}"/>
+			<Name value=""/>
+			<GroupUUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+			<DebugMode value="0"/>
+			<parameter name="Base">
+				<![CDATA[pop]]>
+			</parameter>
+			<parameter name="Link">
+				<![CDATA[poly]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="ImportwithGDAL"/>
+			<UUID value="{62be6b6e-0675-4281-b26e-d9de1e41df54}"/>
+			<Name value=""/>
+			<GroupUUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+			<DebugMode value="0"/>
+			<parameter name="AppendToExisting">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="AttributesToImport">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="Filename">
+				<![CDATA[/home/gaelic/Work/Newcaste-UrbanDevel/DATA/zonal_boundaries/ibk-statbez/statbez.shp]]>
+			</parameter>
+			<parameter name="ImportAll">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="Tolerance">
+				<![CDATA[0.01]]>
+			</parameter>
+			<parameter name="Transform to EPSG:">
+				<![CDATA[31254]]>
+			</parameter>
+			<parameter name="ViewName">
+				<![CDATA[poly]]>
+			</parameter>
+			<parameter name="WFSDataName">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSPassword">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSServer">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="WFSUsername">
+				<![CDATA[]]>
+			</parameter>
+			<parameter name="flip_wfs">
+				<![CDATA[0]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="AttributeCalculator"/>
+			<UUID value="{7d0270b9-95ea-42c8-a681-b03ca9007779}"/>
+			<Name value=""/>
+			<GroupUUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+			<DebugMode value="0"/>
+			<parameter name="NameOfBaseView">
+				<![CDATA[poly]]>
+			</parameter>
+			<parameter name="asVector">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="equation">
+				<![CDATA[hws01]]>
+			</parameter>
+			<parameter name="nameOfNewAttribute">
+				<![CDATA[hws01]]>
+			</parameter>
+			<parameter name="variablesMap">
+				<![CDATA[poly.pop.HWS01*|*hws01*||*]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="ExportToShapeFile"/>
+			<UUID value="{a13e0327-03ae-4e42-a8b6-9e33c6b792ab}"/>
+			<Name value=""/>
+			<GroupUUID value="{89dc5c84-478c-456a-9d3e-6147d5ad5d18}"/>
+			<DebugMode value="0"/>
+			<parameter name="CoordinateSystem">
+				<![CDATA[+proj=utm +zone=55 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs +towgs84=0,0,0]]>
+			</parameter>
+			<parameter name="Faces">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="FileName">
+				<![CDATA[/home/gaelic/polypop.shp]]>
+			</parameter>
+			<parameter name="Lines">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="Name">
+				<![CDATA[poly]]>
+			</parameter>
+			<parameter name="Points">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="offsetX">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="offsetY">
+				<![CDATA[2.638801452417964e-316]]>
+			</parameter>
+		</Node>
+	</Nodes>
+	<Links>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{62be6b6e-0675-4281-b26e-d9de1e41df54}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{08807298-792e-4fb8-b46f-65d000dbbc3b}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{7d0270b9-95ea-42c8-a681-b03ca9007779}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{1061a157-f80e-4d82-ae48-0218807ae137}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{1061a157-f80e-4d82-ae48-0218807ae137}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{62be6b6e-0675-4281-b26e-d9de1e41df54}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{a13e0327-03ae-4e42-a8b6-9e33c6b792ab}"/>
+				<PortName value = "City"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{7d0270b9-95ea-42c8-a681-b03ca9007779}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+	</Links>
+</DynaMindCore>
+<DynaMindGUI>
+	<GUI_Nodes>
+		<GUI_Node>
+			<GUI_UUID value="{08807298-792e-4fb8-b46f-65d000dbbc3b}"/>
+			<GUI_PosX value="0"/>
+			<GUI_PosY value="0"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{62be6b6e-0675-4281-b26e-d9de1e41df54}"/>
+			<GUI_PosX value="268"/>
+			<GUI_PosY value="0"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{1061a157-f80e-4d82-ae48-0218807ae137}"/>
+			<GUI_PosX value="483"/>
+			<GUI_PosY value="52"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{7d0270b9-95ea-42c8-a681-b03ca9007779}"/>
+			<GUI_PosX value="519"/>
+			<GUI_PosY value="160"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{a13e0327-03ae-4e42-a8b6-9e33c6b792ab}"/>
+			<GUI_PosX value="754"/>
+			<GUI_PosY value="283"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+	</GUI_Nodes>
+</DynaMindGUI>
+</DynaMind>

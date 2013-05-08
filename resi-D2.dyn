@@ -1,0 +1,95 @@
+<DynaMind>
+	<Info Version="0.3/">
+<DynaMindCore>
+	<Nodes>
+		<RootNode>
+			<UUID value="{031f786d-d520-4c7e-9ab0-371e6a3b7f7c}"/>
+		</RootNode>
+		<Node>
+			<ClassName value="LoopGroup"/>
+			<UUID value="{4f4dc0af-4a97-46e8-b03e-23751efd3d41}"/>
+			<Name value=""/>
+			<GroupUUID value="{031f786d-d520-4c7e-9ab0-371e6a3b7f7c}"/>
+			<DebugMode value="0"/>
+			<parameter name="Runs">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="nameOfInViews">
+				<![CDATA[CITY*|*]]>
+			</parameter>
+			<parameter name="nameOfOutViews">
+				<![CDATA[CITY*|*]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="AdvancedParceling"/>
+			<UUID value="{d70b9586-1d7f-4b0a-a5b7-f13428e1ea3c}"/>
+			<Name value=""/>
+			<GroupUUID value="{4f4dc0af-4a97-46e8-b03e-23751efd3d41}"/>
+			<DebugMode value="0"/>
+			<parameter name="AspectRatio">
+				<![CDATA[2]]>
+			</parameter>
+			<parameter name="INPUTVIEW">
+				<![CDATA[SUPERBLOCK]]>
+			</parameter>
+			<parameter name="Length">
+				<![CDATA[100]]>
+			</parameter>
+			<parameter name="OUTPUTVIEW">
+				<![CDATA[CITYBLOCK]]>
+			</parameter>
+			<parameter name="offset">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="remove_new">
+				<![CDATA[0]]>
+			</parameter>
+		</Node>
+	</Nodes>
+	<Links>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{d70b9586-1d7f-4b0a-a5b7-f13428e1ea3c}"/>
+				<PortName value = "city"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{4f4dc0af-4a97-46e8-b03e-23751efd3d41}"/>
+				<PortName value = "CITY"/>
+				<PortType value = "1"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{4f4dc0af-4a97-46e8-b03e-23751efd3d41}"/>
+				<PortName value = "CITY"/>
+				<PortType value = "1"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{d70b9586-1d7f-4b0a-a5b7-f13428e1ea3c}"/>
+				<PortName value = "city"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+	</Links>
+</DynaMindCore>
+<DynaMindGUI>
+	<GUI_Nodes>
+		<GUI_Node>
+			<GUI_UUID value="{4f4dc0af-4a97-46e8-b03e-23751efd3d41}"/>
+			<GUI_PosX value="0"/>
+			<GUI_PosY value="0"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{d70b9586-1d7f-4b0a-a5b7-f13428e1ea3c}"/>
+			<GUI_PosX value="0"/>
+			<GUI_PosY value="0"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+	</GUI_Nodes>
+</DynaMindGUI>
+</DynaMind>
